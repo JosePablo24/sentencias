@@ -18,27 +18,20 @@ import javafx.scene.control.TextArea;
  * @author Jose Pablo Sandoval
  */
 public class FXMLDocumentController implements Initializable {
+        
+    @FXML private TextArea area;        
     
-    @FXML private Label label;
-    @FXML private TextArea area;
-    
-    
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
     
     @FXML
     private void limpiar(ActionEvent event) {
+        System.out.println("limpio!");        
         area.setText("");
-        
     }
     
     @FXML
     private void descomponer(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        System.out.println("sucio!");    
+        System.out.println(area.getText());
     }
     
     @Override
