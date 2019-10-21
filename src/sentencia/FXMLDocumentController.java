@@ -5,6 +5,7 @@
  */
 package sentencia;
 
+import java.awt.event.KeyEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -22,11 +23,11 @@ public class FXMLDocumentController implements Initializable {
     @FXML private Label label;
     @FXML private TextArea area;
     
+    Analizador lexico; 
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        
     }
     
     @FXML
@@ -37,8 +38,8 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void descomponer(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        lexico = new Analizador(area.getText());
+        lexico.validateSentence();
     }
     
     @Override
