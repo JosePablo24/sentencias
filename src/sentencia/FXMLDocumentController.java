@@ -17,10 +17,9 @@ import javafx.scene.control.TextArea;
  *
  * @author Jose Pablo Sandoval
  */
-public class FXMLDocumentController implements Initializable {
-        
-    @FXML private TextArea area;        
-    
+public class FXMLDocumentController implements Initializable {    
+    @FXML private TextArea area;
+    private String[] datos;
     
     @FXML
     private void limpiar(ActionEvent event) {
@@ -30,8 +29,8 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void descomponer(ActionEvent event) {
-        System.out.println("sucio!");    
-        System.out.println(area.getText());
+        System.out.println("sucio!");
+        System.out.println(area.getText());        
     }
     
     @Override
